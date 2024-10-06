@@ -25,6 +25,7 @@ import com.example.layout.ui.theme.LayoutTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.font.FontWeight.Companion.Bold
 import androidx.compose.ui.unit.dp
 
 class MainActivity : ComponentActivity() {
@@ -73,7 +74,9 @@ fun Login(modifier: Modifier = Modifier){
         modifier = modifier.padding(8.dp)
     ){
 
-        OutlinedTextField( //para los recuadros de username y pass
+        Text("Register", fontWeight = Bold)
+
+     OutlinedTextField( //para los recuadros de username y pass
             value = username,
             onValueChange = { username = it},
             label = { Text ("Email") },
